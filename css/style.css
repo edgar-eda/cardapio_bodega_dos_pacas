@@ -1,0 +1,307 @@
+/* Variáveis CSS */
+:root {
+    --primary-color: #2E8B57;
+    --secondary-color: #F8F0E3;
+    --accent-color: #FFD700;
+    --dark-color: #1A1A1A;
+    --light-color: #FFFFFF;
+    --gray-light: #F5F5F5;
+    --gray: #888888;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    padding-top: 80px; /* Compensa a navbar fixa */
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    box-shadow: var(--shadow);
+    padding: 0.8rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: var(--light-color);
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: var(--transition);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--light-color);
+    padding: 2rem 0;
+}
+
+.hero-img {
+    max-height: 400px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Feature Cards */
+.feature-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Page Header */
+.page-header {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 4rem 0 2rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-weight: 700;
+}
+
+/* Menu Items */
+.menu-item {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    height: 100%;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item .price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Promotion Cards */
+.promotion-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.promotion-card:hover {
+    transform: translateY(-5px);
+}
+
+.promotion-card .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+}
+
+/* Contact Cards */
+.contact-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 2rem;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* QR Code */
+.qr-code {
+    max-width: 250px;
+    border: 10px solid white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+/* Nav Pills */
+.nav-pills .nav-link {
+    color: var(--dark-color);
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    transition: var(--transition);
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #1f6e43;
+    border-color: #1f6e43;
+}
+
+.btn-success {
+    background-color: #25D366;
+    border-color: #25D366;
+}
+
+.btn-success:hover {
+    background-color: #128C7E;
+    border-color: #128C7E;
+}
+
+/* Map */
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .hero {
+        text-align: center;
+        padding: 3rem 0;
+    }
+    
+    .hero .display-4 {
+        font-size: 2.2rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .menu-item .card-img-top {
+        height: 180px;
+    }
+    
+    .promotion-card .row {
+        flex-direction: column;
+    }
+    
+    .promotion-card .col-md-5 {
+        width: 100%;
+    }
+    
+    .qr-code {
+        max-width: 200px;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-header {
+        padding: 3rem 0 1.5rem;
+    }
+    
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-info h5 {
+        font-size: 1rem;
+    }
+    
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animações */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Logo styles */
+.logo {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Ajustes responsivos para a logo */
+@media (max-width: 576px) {
+    .logo {
+        height: 40px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+}
