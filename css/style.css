@@ -399,4 +399,15 @@ footer {
     box-shadow: 0 0 25px #f1aa2a;
 }
 
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Faz o card ocupar a altura total */
+}
 
+.menu-item .card-body {
+  flex: 1; /* Faz o corpo do card crescer para ocupar espaço */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Empurra o botão sempre para baixo */
+}
