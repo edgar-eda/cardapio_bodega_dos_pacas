@@ -383,3 +383,8 @@ footer {
     position: relative;
     z-index: 2; /* joga o conteúdo por cima */
 }
+.hero .d-flex {
+    justify-content: center; /* centraliza em qualquer tamanho de tela */
+    text-align: center;
+}
+
