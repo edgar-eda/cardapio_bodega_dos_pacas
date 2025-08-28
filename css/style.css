@@ -388,3 +388,15 @@ footer {
     text-align: center;
 }
 
+.aviso {
+    background: #ff0000;  /* vermelho forte */
+    color: #fff;          /* texto branco */
+    border: none;         /* sem borda padrão do alert */
+    font-size: 1rem;
+    border-radius: 6px;
+    padding: 12px;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+
